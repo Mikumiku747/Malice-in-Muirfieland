@@ -296,3 +296,15 @@ help, ?
 Description:
 Provides detailed help on different commands, or special information about the
 game. Use "vocab" for a list of commands. Great for if you're confused. """
+
+changes = """ChangeLog - V1.2
+-Added help command
+-The concept will now slip away in 8 turns"""
+
+version = """Malice in Muirfieland, Version 1.2
+use "help changelog" to see recent changes."""
+
+credits = """Game programming by Daniel Selmes
+Game design by B. Carpenter
+Made as a Year 11 Major project for Software, Design and Development.
+Use common sense when using this software."""

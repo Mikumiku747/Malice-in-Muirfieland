@@ -233,7 +233,7 @@ while exitcode==0:
         elif len(command_list)>1:
             print("Sorry, I can't {}".format(command_str))
         else:
-            print("Please tell me more…")
+            print("Please tell me moreï¿½")
     elif command_list[0] in LOOK_COMS:
         print('-'*70)
         print(world[location][name])
@@ -437,7 +437,7 @@ while exitcode==0:
             print("(In the box) The box emits an audible sigh and a few strands of animal fur ... strange.")
             loseitem('cipher')
         elif command_list[1]=='floppy' and checkinventory('floppy') and location==5:
-            print("(In the box) The box emits a faint whirring sound  followed by several loud scratching and screeching sounds. The box emits an enormous 'CLUNK' and the floppy shoots out of the box and sails across the Quad.")
+            print("(In the box) The box emits a faint whirring soundï¿½ followed by several loud scratching and screeching sounds. The box emits an enormous 'CLUNK' and the floppy shoots out of the box and sails across the Quad.")
             loseitem('floppy')
             for item in inventory:
                 if item[name]=='floppy':
@@ -448,7 +448,7 @@ while exitcode==0:
             world[5][items][world[5][items].index(itemreference(5, 'key'))][visible]=True #Reveal the key and board
             world[5][items][world[5][items].index(itemreference(5, 'board'))][visible]=True
         elif command_list[1]=='board' and checkinventory('board') and location==5:
-            print("(In the box) You reach down to place the board into the box but are startled by a hand which is emerging. The Librarian climbs out and begins hassling you about an overdue book. With a deft hand and a graceful kick,  you slide the board into the Librarian's mouth and knock her back into the box.")
+            print("(In the box) You reach down to place the board into the box but are startled by a hand which is emerging. The Librarian climbs out and begins hassling you about an overdue book. With a deft hand and a graceful kick,ï¿½ you slide the board into the Librarian's mouth and knock her back into the box.")
             loseitem('board')
         elif command_list[1]=='concept' and checkinventory('concept') and location==6 and itemreference(6, 'keyboard')[visible]:
             print("(On keyboard and dumpster) The keyboard seems a lot easier to move now.")
@@ -479,6 +479,9 @@ while exitcode==0:
         elif command_list[1] in INVENTORY_COMS: print(helptext.inventory)
         elif command_list[1] in USE_COMS: print(helptext.use)
         elif command_list[1] in HELP_COMS: print(helptext.help)
+        elif command_list[1] == 'changelog': print(helptext.changes)
+        elif command_list[1] == 'version': print(helptext.version)
+        elif command_lsit[1] == 'credits': print(helptext.credits)
 
     else:
         print("Huh? {}?".format(command_str))

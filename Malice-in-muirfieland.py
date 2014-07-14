@@ -481,7 +481,7 @@ while exitcode==0:
         elif command_list[1] in HELP_COMS: print(helptext.help)
         elif command_list[1] == 'changelog': print(helptext.changes)
         elif command_list[1] == 'version': print(helptext.version)
-        elif command_lsit[1] == 'credits': print(helptext.credits)
+        elif command_list[1] == 'credits': print(helptext.credits)
 
     else:
         print("Huh? {}?".format(command_str))
